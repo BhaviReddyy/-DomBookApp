@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DomBookApp - Admin</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <header class="topbar">
+        <a href="index.html" class="navlink">&larr; Home</a>
+        <h2>Admin - Book Management</h2>
+    </header>
+
+    <main class="container">
+
+        <section class="card form-card">
+            <h3>Add Book</h3>
+            <form id="addBookForm">
+                <div class="field"><label>Title</label><input id="title" required /></div>
+                <div class="field"><label>Author</label><input id="author" required /></div>
+                <div class="field">
+                    <label>Category</label>
+                    <select id="category" required>
+            <option value="">Select category</option>
+            <option>Fiction</option>
+            <option>Comedy</option>
+            <option>Technical</option>
+          </select>
+                </div>
+
+                <div class="actions">
+                    <button type="submit" class="btn">Add Book</button>
+                    <button type="button" id="clearBtn" class="btn ghost">Clear</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="controls">
+            <div>
+                <label>Filter by Category</label>
+                <select id="filterSelect">
+          <option value="All">All</option>
+          <option>Fiction</option>
+          <option>Comedy</option>
+          <option>Technical</option>
+        </select>
+            </div>
+
+            <div>
+                <label>Sort</label>
+                <button id="sortAZ" class="btn small">Sort A → Z</button>
+                <button id="sortZA" class="btn small">Sort Z → A</button>
+            </div>
+        </section>
+
+        <section id="booksGrid" class="grid"></section>
+
+    </main>
+
+    <script src="js/admin.js"></script>
+</body>
+
+</html>
